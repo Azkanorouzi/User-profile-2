@@ -1,0 +1,255 @@
+/* - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
+Dark cyan: hsl(185, 75%, 39%)
+Very dark desaturated blue: hsl(229, 23%, 23%)
+Dark grayish blue: hsl(227, 10%, 46%)
+
+### Neutral
+
+Dark gray: hsl(0, 0%, 59%) */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/* defaults */
+body{
+background:hsl(185, 75%, 39%) ;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+}
+*{
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+ color:hsl(229, 23%, 23%) ;
+ font-size: 1rem;
+ font-family: 'Kumbh Sans', sans-serif;
+ font-weight: 700;
+}
+.flex-container{
+ display: grid;
+ justify-content: center;
+ align-items: center;
+ width: 100vw;
+ height: 100vh;
+grid-template-rows: 22vh 55vh 22vh;
+grid-template-columns: 5vw 90vw 5vw;
+}
+/* defaults end */
+
+/* attribution */
+
+/* attribution end */
+
+/* pattern */
+
+.pattern{
+ z-index: -1000;
+}
+.top-pattern{
+ position: relative;
+ right: 700px;
+ bottom: 600px;
+}
+.bottom-pattern{
+ position: relative; 
+ right: 200px;
+}
+.bottom-container{
+ grid-row: 3/4;
+ grid-column: 3/4;
+ height: 100%;
+ width: 100%;
+}
+.top-container{
+  grid-row: 1/3;
+ grid-column: 1/3;
+ height: 100%;
+ width: 100%;
+}
+
+/* card */
+.card-container{
+ grid-row: 2/3;
+ grid-column: 2/3;
+  height: 100%;
+ width: 100%;
+ margin-right: 20px;
+}
+.card{
+ background: white;
+ width: 100%;
+ height: 100%;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr;
+ grid-row: 100%;
+ grid-column: 33% 33% 33%;
+ background-color:white;
+border-radius: 20px;
+}
+.bg{
+ background:url("./images/bg-pattern-card.svg");
+ grid-row: 1/2;
+ grid-column: 1/-1;
+ display: flex;
+ background-size: cover;
+ width: 100%;
+ height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+}
+.bg .victor{
+ border-radius: 50%;
+ width: 90px;
+position: relative;
+top: 40px;
+border: 2px solid white;
+}
+.victor-t{
+grid-row: 2/3;
+grid-column: 2/3;
+text-align: center;
+position: relative;
+top: 50px;
+right: 25px;
+}
+.victor-t span{
+  color: hsl(227, 10%, 46%);
+}
+.followers{
+  grid-row: 3/4;
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+padding-left: 50px;
+}
+.followers span{
+    color: hsl(227, 10%, 46%);
+    position: relative;
+    top: 25px;
+    right: 50px;
+}
+.likes{
+  grid-row: 3/4;
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.likes span{
+    color: hsl(227, 10%, 46%);
+    position: relative;
+    top: 25px;
+    right: 40px;
+}
+.photos{
+    grid-row: 3/4;
+  grid-column: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.photos span{
+      color: hsl(227, 10%, 46%);
+    position: relative;
+    top: 25px;
+    right: 40px;
+}
+.bg{
+  width:100% ;
+}
+.likes,.followers,.photos{
+  border-top: 2px solid hsla(227, 10%, 46%, 0.212);
+}
+@media screen and (min-width:1440px){
+  .card{
+    width: 350px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .top-pattern{
+    position: relative;
+    right: 250px;
+    top: -550px;
+  }
+  .bottom-pattern{
+    position: relative;
+    bottom: 450px;
+    left: 800px;
+  }
+}
+@media screen and (max-height:450px){
+  .card{
+    position: relative;
+    height: 260px;
+  }
+}
+@media screen and (max-height:334px){
+  .card{
+   position: relative;
+   bottom: 50px;
+   
+  }
+}
+@media screen and (max-width:354px){
+  .card{
+    width: 250px;
+    margin-left: 10vw;
+  }
+  .bg{
+    width: 250px;
+  }
+  .likes,.followers,.photos{
+    font-size: 15px;
+   position: relative;
+   left: 0px;
+   padding: 0px;
+  }
+  .followers{
+    position: relative;
+    left: 30px;
+  }
+}
+@media screen and (max-width:296px){
+    .card{
+    width: 170px;
+    margin-left: 10vw;
+  }
+  .bg{
+    width: 170px;
+  }
+    .likes,.followers,.photos{
+    font-size: 13px;
+   position: relative;
+   left: 0px;
+   padding: 0px;
+  }
+  .likes span,.followers span,.photos span{
+     font-size: 10px;
+  }
+    .followers{
+    position: relative;
+    left: 30px;
+  }
+}
+  @media  screen and (min-width:1668px) {
+    .bottom-pattern{
+   position: relative;
+   left: 1000px;
+    }
+    .card{
+      width: 760px;
+    }
+  }
+
+
+
